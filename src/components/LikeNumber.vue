@@ -7,12 +7,7 @@
 
 <script>
   export default {
-    props: {
-      totalNumber: {
-        type: Number,
-        default: 10
-      }
-    },
+    props: ["totalNumber"],
     computed: {
       halfNumber() {
         return this.totalNumber / 2
