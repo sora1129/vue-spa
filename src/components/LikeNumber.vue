@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>いいね({{ halfNumber / 2 }})</p>
+    <p>いいね({{ halfNumber}})</p>
     <button @click="increment">+1</button>
   </div>
 </template>
@@ -15,7 +15,7 @@
     },
     methods: {
       increment() {
-        this.number += 1;
+        this.$emit("my-click", this.totalNumber + 1);
       }
     },
   };
