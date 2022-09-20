@@ -1,7 +1,7 @@
 import Vue from 'vue'
 // .vue ファイルをインポートすることでAppにオブジェクト化する（.vueファイルはそのまま使えないからコンポーネントのオブジェクトにする）
 import App from './App.vue'
-import LikeNumber from './LikeNumber.vue'
+import LikeNumber from './components/LikeNumber.vue'
 
 Vue.config.productionTip = false
 
