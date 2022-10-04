@@ -1,7 +1,9 @@
 <template>
   <div>
-    <LikeHeader headerText="トータルのいいね数"></LikeHeader>
-    <p>{{ number }}</p>
+    <LikeHeader>
+      <h1>トータルのいいね数</h1>
+      <p>{{ number }}</p>
+    </LikeHeader>
     <LikeNumber :total-number="number" @my-click="incrementnumber"></LikeNumber>
     <LikeNumber :total-number="number"></LikeNumber>
   </div>
@@ -21,7 +23,7 @@
     },
     methods: {
       incrementnumber(value) {
-        this.number = value
+        this.number = value;
       }
     },
   }
