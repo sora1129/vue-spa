@@ -1,8 +1,8 @@
 <template>
   <div>
-    <LikeHeader></LikeHeader>
+    <LikeHeader headerText="トータルのいいね数"></LikeHeader>
     <p>{{ number }}</p>
-    <LikeNumber :total-number="number" @my-click="number = $event"></LikeNumber>
+    <LikeNumber :total-number="number" @my-click="incrementnumber"></LikeNumber>
     <LikeNumber :total-number="number"></LikeNumber>
   </div>
 </template>
@@ -18,7 +18,12 @@
     },
     components: {
       LikeHeader
-    }
+    },
+    methods: {
+      incrementnumber(value) {
+        this.number = value
+      }
+    },
   }
 </script>
 
