@@ -1,5 +1,7 @@
 <template>
-  <h1>{{ headerText }}</h1>
+  <div>
+    <slot></slot>
+  </div>
 </template>
 
 <script>
