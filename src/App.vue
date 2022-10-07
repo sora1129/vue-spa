@@ -1,30 +1,32 @@
 <template>
   <div>
-    <LikeHeader #default="slotProps">
-        <p>{{ slotProps }}</p>
-        <h2>みなさん</h2>
+    <LikeHeader>
         <h3>はじめまして</h3>
-        <p>よろしくお願いします</p>
-        <!-- <template #title></template> -->
     </LikeHeader>
     <LikeNumber :total-number="number" @my-click="incrementnumber"></LikeNumber>
-    <LikeNumber :total-number="number"></LikeNumber>
+    <button @click="currentComponet= 'Home'">Home</button>
+    <button @click="currentComponet= 'About'">About</button>
+    <component :is="currentComponet"></component>
   </div>
 </template>
 
 <script>
   import LikeHeader from './components/LikeHeader.vue';
+  import MyAbout from './components/MyAbout.vue';
+  import MyHome from './components/MyHome.vue';
 
   export default {
     data() {
       return {
         number: 14,
-        title: 'title'
+        currentComponet: "Home"
       };
     },
     components: {
-      LikeHeader
-    },
+    LikeHeader,
+    MyAbout,
+    MyHome
+},
     methods: {
       incrementnumber(value) {
         this.number = value;
