@@ -4,9 +4,11 @@
         <h3>はじめまして</h3>
     </LikeHeader>
     <LikeNumber :total-number="number" @my-click="incrementnumber"></LikeNumber>
-    <button @click="currentComponet= 'Home'">Home</button>
-    <button @click="currentComponet= 'About'">About</button>
-    <component :is="currentComponet"></component>
+    <button @click="currentComponet='MyHome'">Home</button>
+    <button @click="currentComponet='MyAbout'">About</button>
+    <keep-alive>
+      <component :is="currentComponet"></component>
+    </keep-alive>
   </div>
 </template>
 
