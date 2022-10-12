@@ -39,6 +39,14 @@
       <label for="detail">イベントの内容</label>
       <textarea id="detail" cols="30" rows="10" v-model="eventData.detail"></textarea>
       <p style="white-space: pre;">{{ eventData.detail }}</p>
+
+      <input
+        type="checkbox"
+        id="isPraivate"
+        v-model="eventData.isPraivate"
+      >
+      <label for="isPraivate">非公開</label>
+      <p>{{ eventData.isPraivate}}</p>
     </div>
   </div>
 </template>
@@ -57,7 +65,8 @@
           title: "",
           maxNumber: 0,
           host: "",
-          detail: ""
+          detail: "",
+          isPraivate: false
         }
       };
     },
