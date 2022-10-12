@@ -47,6 +47,30 @@
       >
       <label for="isPraivate">非公開</label>
       <p>{{ eventData.isPraivate}}</p>
+
+      <p>参加条件</p>
+      <input
+        type="checkbox"
+        id="10"
+        value="10代"
+        v-model="eventData.target"
+      >
+      <label for="10">10代</label>
+      <input
+        type="checkbox"
+        id="20"
+        value="20代"
+        v-model="eventData.target"
+      >
+      <label for="30">30代</label>
+      <input
+        type="checkbox"
+        id="30"
+        value="30代"
+        v-model="eventData.target"
+      >
+      <label for="30">30代</label>
+      <p>{{ eventData.target }}</p>
     </div>
   </div>
 </template>
@@ -66,7 +90,8 @@
           maxNumber: 0,
           host: "",
           detail: "",
-          isPraivate: false
+          isPraivate: false,
+          target: []
         }
       };
     },
