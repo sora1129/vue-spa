@@ -18,6 +18,15 @@
         v-model.lazy="eventData.title"
       >
       <p>{{ eventData.title }}</p>
+
+      <h2>イベントのフォーム</h2>
+      <label for="maxNumber">最大人数</label>
+      <input
+        id="maxNumber"
+        type="number"
+        v-model.number="eventData.maxNumber"
+      >
+      <p>{{ typeof eventData.maxNumber }}</p>
     </div>
   </div>
 </template>
@@ -33,7 +42,8 @@
         number: 14,
         currentComponet: "Home",
         eventData: {
-          title: "タイトル"
+          title: "タイトル",
+          maxNumber: 0
         }
       };
     },
