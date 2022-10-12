@@ -15,7 +15,7 @@
       <input
         id="title"
         type="text"
-        v-model="eventData.title"
+        v-model.lazy="eventData.title"
       >
       <p>{{ eventData.title }}</p>
     </div>
