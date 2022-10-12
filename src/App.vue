@@ -9,6 +9,16 @@
     <keep-alive>
       <component :is="currentComponet"></component>
     </keep-alive>
+    <div>
+      <h2>イベントのフォーム</h2>
+      <label for="title">タイトル</label>
+      <input
+        id="title"
+        type="text"
+        v-model="eventData.title"
+      >
+      <p>{{ eventData.title }}</p>
+    </div>
   </div>
 </template>
 
@@ -21,7 +31,10 @@
     data() {
       return {
         number: 14,
-        currentComponet: "Home"
+        currentComponet: "Home",
+        eventData: {
+          title: "タイトル"
+        }
       };
     },
     components: {
@@ -36,9 +49,3 @@
     },
   }
 </script>
-
-<style scoped>
-  div {
-    border: 1px solid blue;
-  }
-</style>
