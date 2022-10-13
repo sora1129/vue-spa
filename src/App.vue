@@ -11,14 +11,7 @@
     </keep-alive>
     <div style="padding: 10rem;">
       <h2>イベントのフォーム</h2>
-      <label for="title">タイトル</label>
-      <input
-        id="title"
-        type="text"
-        v-model="eventData.title"
-      >
-      <pre>{{ eventData.title }}</pre>
-
+      <EventTitle v-model="eventData.title"></EventTitle>
       <label for="maxNumber">最大人数</label>
       <input
         id="maxNumber"
@@ -101,6 +94,7 @@
   import LikeHeader from './components/LikeHeader.vue';
   import MyAbout from './components/MyAbout.vue';
   import MyHome from './components/MyHome.vue';
+  import EventTitle from './components/EventTitle.vue';
 
   export default {
     data() {
@@ -123,7 +117,8 @@
     components: {
     LikeHeader,
     MyAbout,
-    MyHome
+    MyHome,
+    EventTitle
 },
     methods: {
       incrementnumber(value) {
