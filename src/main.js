@@ -7,7 +7,7 @@ Vue.config.productionTip = false
 
 Vue.component('LikeNumber', LikeNumber);
 Vue.directive('border', function(el, binding) {
-  
+  el.style.border = 'solid black 2px';
 });
 
 new Vue({
